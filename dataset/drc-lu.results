@@ -1,0 +1,158 @@
+                               RESULTS: CLEAN
+
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
+
+===========================================================================
+
+
+---------------------------------------------------------------------------
+ICV Execution
+---------------------------------------------------------------------------
+
+
+                                 IC Validator 
+
+         Version U-2022.12-SP4-1 for linux64 - Sep 07, 2023 cl#9174752
+
+                    Copyright (c) 1996 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Called as: icv -vue -c wrapper -f OASIS -i ../inputs/design-merged.oas -D _drPROCESS=_drdotFour -D _drLAYERSTACK=m11_1x_3xa_1xb_1xc_2yb_2ga_mim2_1gb__bumpp -I ../inputs/adk/icv_runsets_libcells -I ../inputs/adk/icv_runsets_PXL ../inputs/adk/icv_runsets_lu.rs
+
+Command Line Summary:
+icv
+-c wrapper
+-f OASIS
+-i ../inputs/design-merged.oas
+-vue
+-D _drLAYERSTACK=m11_1x_3xa_1xb_1xc_2yb_2ga_mim2_1gb__bumpp
+-D _drPROCESS=_drdotFour
+-I ../inputs/adk/icv_runsets_libcells
+-I ../inputs/adk/icv_runsets_PXL
+../inputs/adk/icv_runsets_lu.rs
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Input file name:        ../inputs/design-merged.oas
+Top cell name:          wrapper
+Layout format:          OASIS
+Runset file:            ../inputs/adk/icv_runsets_lu.rs
+Working directory:      /scratch/ee599-fall2024/team-4/build-train-2025-0127/build_block_0130/23-intel16-synopsys-icv-drc-lu/verify_drc-lu
+Run details directory:  /scratch/ee599-fall2024/team-4/build-train-2025-0127/build_block_0130/23-intel16-synopsys-icv-drc-lu/verify_drc-lu/run_details
+Layout error file:      wrapper.LAYOUT_ERRORS
+User name:              aditichh
+Time started:           2025/01/30 08:35:26PM
+Time ended:             2025/01/30 08:38:01PM
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+---------------------------------------------------------------------------
+Results Summary
+---------------------------------------------------------------------------
+
+Rule and DRC Error Summary
+
+35 total rules were run.
+1 rule NOT EXECUTED.
+0 rules have violations.
+There are 0 total violations.
+Refer to wrapper.LAYOUT_ERRORS
+
+
+---------------------------------------------------------------------------
+Assign Layer Statistics
+---------------------------------------------------------------------------
+
+Utilized Assign Layers = 126
+ Empty Utilized Assign Layers = 89
+ Non-Empty Utilized Assign Layers = 37
+Pruned Assign Layers = 14514
+
+
+---------------------------------------------------------------------------
+Run Configuration
+---------------------------------------------------------------------------
+
+run_options()
+ verbose_results_file = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+hierarchy_options()
+ delete = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+error_options()
+ error_limit_per_check = 4999
+ match_errors = { }
+ match_errors_processing_mode = HIERARCHICAL
+ match_errors_tolerance = 0.0000
+ violation_options = { }
+ report_empty_violations = false
+ clean_classifications = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Production Environment Variables
+
+HOME = "/home/aditichh"
+ICV_HOME_DIR = "/cad/synopsys/icvalidator/U-2022.12-SP4-1"
+PATH = "/cad/synopsys/icvalidator/U-2022.12-SP4-1/bin/LINUX64_L31el:/cad/synopsys/icvalidator/U-2022.12-SP4-1/contrib/bin/LINUX64_L31el:/scratch/ee599-fall2024/team-4/ee599-milestone1/synthesis/venv/bin:/cad/cadence/installs/ICADVM201/tools/dfII/bin:/cad/cadence/installs/ICADVM201/tools/bin:/cad/genesis2/r11879/Genesis2Tools/gui/bin:/cad/genesis2/r11879/Genesis2Tools/bin:/opt/rh/rh-python38/root/usr/local/bin:/opt/rh/rh-python38/root/usr/bin:/cad/mentor/calibre/aoi_cal_2022.2_24.16/bin:/cad/synopsys/verdi/T-2022.06-SP2-6/bin:/cad/synopsys/icv_workbench/V-2023.09/bin:/cad/synopsys/icvalidator/U-2022.12-SP4-1/bin:/cad/synopsys/vcs/S-2021.09-SP1/bin:/cad/synopsys/prime/T-2022.03/bin:/cad/cadence/installs/XCELIUM2303/tools/bin:/cad/cadence/installs/DDI221/INNOVUS221/bin:/cad/cadence/installs/GENUS211/bin:/cad/synopsys/fm/U-2022.12-SP6/bin:/cad/synopsys/syn/U-2022.12/bin:/cad/synopsys/lc/U-2022.12-SP6/bin:/classes/ee599/bin:/usr/local/openssl/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/aditichh/bin:/usr/lib:/home/aditichh/.local/bin:/home/aditichh/bin"
+SNPSLMD_LICENSE_FILE = "1720@ee-licapp-prd1.usc.edu"
+USER = "aditichh"
+
+5 production environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Debug Environment Variables
+
+0 debug environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Distributed Processing
+ Distributed Cores = 2
+
+ eceedc-01.usc.edu (2/176)
+   Commands: 2 in parallel, maximum
+   Model: Intel(R) Xeon(R) CPU E5-4669 v4 @ 2.20GHz (VMware full virtualization)
+   CPU:   176 cpu 2200 MHz
+   Cores: 176 
+   RAM:   491.891 GB
+   Swap:  3.999 GB
+
+
+---------------------------------------------------------------------------
+Performance Statistics
+---------------------------------------------------------------------------
+
+IC Validator Run Time = 0:02:35
+Peak Single Command Memory = 0.233 GB
+Peak Disk Usage = 0.007 GB
+Network Disk Usage Peak=0.007 GB (no group)
+Group File Disk Usage Peak=0.000 GB
+
+Distributed Host Memory Usage
+ eceedc-01.usc.edu (2/176)  ....  Average=4.956 GB, Peak=6.223 GB / 491.891 GB
+
+Overall Distributed Utilization: not available
+IC Validator is done.

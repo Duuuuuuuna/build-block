@@ -1,0 +1,101 @@
+{"tcl_code": "create_clock -name clk -period 10.0 [get_ports clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock clk 5 [get_ports {data_in}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock clk 3 [get_ports {reset}]", "has_issue": true, "issue_type": "Reset signal should not be constrained with output delay."}
+{"tcl_code": "create_clock -period 10 [get_ports clk]", "has_issue": true, "issue_type": "Missing clock name in create_clock command."}
+{"tcl_code": "set_drive 4 [get_ports out_data]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay 5 -clock clk [get_ports {data_in}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock clk -max 5 -min 2 [get_ports data_in]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock 5 [get_ports data_in]", "has_issue": true, "issue_type": "Incorrect -clock argument; expected clock name, got numerical value."}
+{"tcl_code": "set_false_path -from [get_ports rst]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_max_delay -from [get_ports in1] -to [get_ports out1] 10", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_max_delay -from [get_ports in1] -to [get_ports out1]", "has_issue": true, "issue_type": "Missing delay value in set_max_delay command."}
+{"tcl_code": "set_clock_latency -source clk 2", "has_issue": true, "issue_type": "Clock name should be specified using get_clocks, not raw string."}
+{"tcl_code": "set_clock_latency -source [get_clocks clk] 2", "has_issue": false, "issue_type": null}
+{"tcl_code": "create_clock -name clk -waveform {0 5} -period 10 [get_ports clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "create_clock -waveform {0 5} -period 10 clk", "has_issue": true, "issue_type": "Clock object should be resolved using get_ports or get_clocks."}
+{"tcl_code": "set_clock_uncertainty 0.3 [get_clocks clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_uncertainty clk 0.3", "has_issue": true, "issue_type": "Clock name must be specified via get_clocks."}
+{"tcl_code": "set_output_delay -clock clk 2 [get_ports out_data]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock clk 5 [get_ports {clk}]", "has_issue": true, "issue_type": "Clock port should not be constrained with input delay."}
+{"tcl_code": "set_clock_latency -source [get_clocks clk] -early 1", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_latency -source [get_clocks clk] -late 1.5", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock [get_clocks clk] 2 [get_ports data_out]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock clk 2 [get_ports {data_out}]", "has_issue": true, "issue_type": "Clock must be passed using get_clocks in output delay constraint."}
+{"tcl_code": "set_false_path -through [get_pins U1/A]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -to U1/A", "has_issue": true, "issue_type": "Target path must be specified using get_pins or get_ports."}
+{"tcl_code": "set_clock_groups -asynchronous -group {clk1} -group {clk2}", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_groups -group {clk1 clk2} -group {clk3}", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_groups -asynchronous {clk1 clk2}", "has_issue": true, "issue_type": "Each group must be prefixed with -group keyword."}
+{"tcl_code": "set_case_analysis 1 [get_ports test_en]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_case_analysis [get_ports test_en] 1", "has_issue": true, "issue_type": "set_case_analysis expects value first, then object list."}
+{"tcl_code": "set_disable_timing [get_cells U1] -through A", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_disable_timing [get_cells U1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_disable_timing -through A [get_cells U1]", "has_issue": true, "issue_type": "Incorrect order: cell object should come before -through option."}
+{"tcl_code": "set_input_transition 0.2 [get_ports data_in]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_transition [get_ports data_in] 0.2", "has_issue": true, "issue_type": "Transition value must be the first argument."}
+{"tcl_code": "set_input_delay -clock clk -min 2 -max 5 [get_ports {in1}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock clk -min -max 5 [get_ports {in1}]", "has_issue": true, "issue_type": "Missing value for -min option in input delay."}
+{"tcl_code": "set_multicycle_path 2 -setup -from [get_ports in1] -to [get_registers r1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_multicycle_path -setup 2 -from [get_ports in1] -to [get_registers r1]", "has_issue": true, "issue_type": "Value must directly follow set_multicycle_path."}
+{"tcl_code": "set_multicycle_path 2 -hold -from [get_ports in1] -to [get_registers r1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -from [get_clocks clk] -to [get_clocks clk]", "has_issue": true, "issue_type": "False path between same clock domains is redundant."}
+{"tcl_code": "set_max_delay 10 -from [get_ports a] -to [get_ports b]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_max_delay -from [get_ports a] -to [get_ports b]", "has_issue": true, "issue_type": "Missing delay value in set_max_delay."}
+{"tcl_code": "set_input_delay -clock [get_clocks clk] 4 [get_ports in1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock [get_ports clk] 4 [get_ports in1]", "has_issue": true, "issue_type": "Clock argument should use get_clocks, not get_ports."}
+{"tcl_code": "set_clock_uncertainty -setup 0.1 [get_clocks clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_uncertainty [get_clocks clk] -setup 0.1", "has_issue": true, "issue_type": "Option -setup must precede the value and object."}
+{"tcl_code": "set_output_delay 3 -clock [get_clocks clk] [get_ports out]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock [get_clocks clk] [get_ports out]", "has_issue": true, "issue_type": "Missing delay value in output delay command."}
+{"tcl_code": "set_false_path -from [get_ports in1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -from in1", "has_issue": true, "issue_type": "Signal must be resolved using get_ports or get_pins."}
+{"tcl_code": "set_input_delay -clock clk -add_delay 5 [get_ports in1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -add_delay -clock clk 5 [get_ports in1]", "has_issue": true, "issue_type": "Incorrect ordering of -add_delay and delay value."}
+{"tcl_code": "set_false_path -through [get_ports en]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -through en", "has_issue": true, "issue_type": "Signal in -through must use get_ports/get_pins."}
+{"tcl_code": "set_input_delay -clock clk 0 [get_ports reset]", "has_issue": true, "issue_type": "Reset signals typically should not have input delay."}
+{"tcl_code": "set_input_delay -clock clk 5 [get_ports {data_in data_valid}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock clk 4 [get_ports out1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock 4 [get_ports out1]", "has_issue": true, "issue_type": "Invalid clock argument; must be a clock object."}
+{"tcl_code": "create_clock -name clk -period 10 [get_ports clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "create_clock -period 10 -name [get_ports clk]", "has_issue": true, "issue_type": "Clock name must be a string, not an object."}
+{"tcl_code": "set_case_analysis 0 [get_ports mode_sel]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_case_analysis [get_ports mode_sel] 0", "has_issue": true, "issue_type": "set_case_analysis requires value first, then object."}
+{"tcl_code": "set_multicycle_path 3 -setup -from [get_ports a] -to [get_pins U1/Q]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_multicycle_path -setup -from [get_ports a] -to [get_pins U1/Q] 3", "has_issue": true, "issue_type": "Multicycle value must come before options."}
+{"tcl_code": "set_clock_latency -source [get_clocks clk] 1.5", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_latency -source clk 1.5", "has_issue": true, "issue_type": "Clock source should be specified using get_clocks."}
+{"tcl_code": "set_output_delay -clock [get_clocks clk] -min 1 -max 3 [get_ports out1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_output_delay -clock [get_clocks clk] -min -max 3 [get_ports out1]", "has_issue": true, "issue_type": "Missing value for -min option in output delay."}
+{"tcl_code": "set_input_delay -clock [get_clocks clk] -min 1 -max 3 [get_ports in1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock [get_clocks clk] -min -max 3 [get_ports in1]", "has_issue": true, "issue_type": "Missing value for -min option in input delay."}
+{"tcl_code": "set_disable_timing [get_cells U1]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_disable_timing -through A", "has_issue": true, "issue_type": "Missing cell target object in set_disable_timing."}
+{"tcl_code": "set_input_delay -clock clk 5 [get_ports {clk}]", "has_issue": true, "issue_type": "Input delay should not be set on clock ports."}
+{"tcl_code": "set_output_delay -clock clk 5 [get_ports {reset}]", "has_issue": true, "issue_type": "Reset signals should not be assigned output delay."}
+{"tcl_code": "set_input_delay -clock clk 4 [get_ports {data bus}]", "has_issue": true, "issue_type": "Port name contains space; use braces or fix syntax."}
+{"tcl_code": "set_input_delay -clock clk 4 [get_ports {data_bus}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -from [get_ports in_valid]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -from in_valid", "has_issue": true, "issue_type": "Signal must be wrapped in get_ports/get_pins."}
+{"tcl_code": "set_multicycle_path 2 -hold -from [get_ports a] -to [get_pins b]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_multicycle_path -hold 2 -from [get_ports a] -to [get_pins b]", "has_issue": true, "issue_type": "Value must be the first argument after command."}
+{"tcl_code": "create_clock -name clk -period 10 [get_ports clk]", "has_issue": false, "issue_type": null}
+{"tcl_code": "create_clock -name [get_ports clk] -period 10", "has_issue": true, "issue_type": "Clock name must be a string literal, not an object reference."}
+{"tcl_code": "set_input_transition 0.15 [get_ports in_sig]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_transition [get_ports in_sig] 0.15", "has_issue": true, "issue_type": "Transition value must come before port reference."}
+{"tcl_code": "set_clock_groups -asynchronous -group {clk1 clk2} -group {clk3}", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_groups -asynchronous {clk1 clk2}", "has_issue": true, "issue_type": "Missing -group keyword before each clock group."}
+{"tcl_code": "set_drive 2 [get_ports drive_out]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_drive [get_ports drive_out] 2", "has_issue": true, "issue_type": "Drive strength value must come before port list."}
+{"tcl_code": "set_input_delay -clock clk 3 [get_ports {rst_n}]", "has_issue": true, "issue_type": "Reset ports should not be constrained with input delay."}
+{"tcl_code": "set_output_delay -clock clk 3 [get_ports {out_en}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_uncertainty 0.1 [get_clocks {clk1 clk2}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_clock_uncertainty [get_clocks {clk1 clk2}] 0.1", "has_issue": true, "issue_type": "Uncertainty value must come before clock objects."}
+{"tcl_code": "set_input_delay -clock clk 2 [get_ports {in[3]}]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_input_delay -clock clk 2 [get_ports in[3]]", "has_issue": true, "issue_type": "Bus port names with brackets must be wrapped in braces."}
+{"tcl_code": "set_max_delay 12 -from [get_ports a] -to [get_ports b]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_max_delay -from [get_ports a] -to [get_ports b] 12", "has_issue": true, "issue_type": "Delay value must come before -from and -to."}
+{"tcl_code": "set_case_analysis 1 [get_ports mode]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_case_analysis [get_ports mode] 1", "has_issue": true, "issue_type": "Order of arguments is incorrect: value must be first."}
+{"tcl_code": "set_false_path -to [get_ports debug_out]", "has_issue": false, "issue_type": null}
+{"tcl_code": "set_false_path -to debug_out", "has_issue": true, "issue_type": "Target signal must be wrapped with get_ports/get_pins."}

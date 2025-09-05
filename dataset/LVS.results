@@ -1,0 +1,277 @@
+                         LVS Compare Results: FAIL
+
+                          #####   ###   #   #
+                          #      #   #  #   #
+                          ####   #####  #   #
+                          #      #   #  #   #
+                          #      #   #  #   #####
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                     DRC and Extraction Results: CLEAN
+
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
+
+===========================================================================
+
+
+---------------------------------------------------------------------------
+ICV Execution
+---------------------------------------------------------------------------
+
+
+                                 IC Validator 
+
+         Version U-2022.12-SP4-1 for linux64 - Sep 07, 2023 cl#9174752
+
+                    Copyright (c) 1996 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Called as: icv -vue -f OASIS -c wrapper -D _drPROCESS=_drdotFour -D _drLAYERSTACK=m11_1x_3xa_1xb_1xc_2yb_2ga_mim2_1gb__bumpp -i ../inputs/design-merged.oas -s ../v2sp/design.lvs.icv -sf icv -I ../inputs/adk/icv_runsets_libcells -I ../inputs/adk/icv_runsets_PXL ../inputs/adk/icv_runsets_lvs.rs
+
+Command Line Summary:
+icv
+-c wrapper
+-f OASIS
+-i ../inputs/design-merged.oas
+-s ../v2sp/design.lvs.icv
+-sf icv
+-vue
+-D _drLAYERSTACK=m11_1x_3xa_1xb_1xc_2yb_2ga_mim2_1gb__bumpp
+-D _drPROCESS=_drdotFour
+-I ../inputs/adk/icv_runsets_libcells
+-I ../inputs/adk/icv_runsets_PXL
+../inputs/adk/icv_runsets_lvs.rs
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Input file name:        ../inputs/design-merged.oas
+Top cell name:          wrapper
+Layout format:          OASIS
+Runset file:            ../inputs/adk/icv_runsets_lvs.rs
+Working directory:      /scratch/ee599-fall2024/team-4/build-train-2025-0127/build_block_0130/24-intel16-synopsys-icv-lvs/verify_lvs
+Run details directory:  /scratch/ee599-fall2024/team-4/build-train-2025-0127/build_block_0130/24-intel16-synopsys-icv-lvs/verify_lvs/run_details
+LVS error file:         wrapper.LVS_ERRORS
+Layout error file:      wrapper.LAYOUT_ERRORS
+User name:              aditichh
+Time started:           2025/01/30 08:07:22PM
+Time ended:             2025/01/30 08:11:48PM
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+---------------------------------------------------------------------------
+Results Summary
+---------------------------------------------------------------------------
+
+LVS Device Extraction Error Summary
+
+265 total rules were run.
+10 rules NOT EXECUTED.
+0 rules have violations.
+There are 0 total violations.
+Refer to wrapper.LAYOUT_ERRORS
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+LVS Compare Summary
+
+LVS Compare Result: FAIL
+TOP equivalence point: [wrapper, wrapper]
+
+    blackbox cells checked: 0
+      passed  0
+      failed  0
+
+    equivalence points checked: 87
+      passed  86
+    * failed  1
+
+Refer to wrapper.LVS_ERRORS for LVS Error Diagnostics
+
+    [FAIL]  wrapper != wrapper   (level 0)
+
+    [PASS]  b15bfn000an1n24x5 == b15bfn000an1n24x5   (level 1)
+    [PASS]  b15inv020an1n03x5 == b15inv020an1n03x5   (level 1)
+    [PASS]  b15bfn001an1n06x5 == b15bfn001an1n06x5   (level 1)
+    [PASS]  b15nor004an1n02x3 == b15nor004an1n02x3   (level 1)
+    [PASS]  b15bfn001an1n64x5 == b15bfn001an1n64x5   (level 1)
+    [PASS]  b15zdnf33an1n32x5 == b15zdnf33an1n32x5   (level 1)
+    [PASS]  b15aob012an1n02x5 == b15aob012an1n02x5   (level 1)
+    [PASS]  b15nandp2an1n02x5 == b15nandp2an1n02x5   (level 1)
+    [PASS]  b15rm0023an1n02x5 == b15rm0023an1n02x5   (level 1)
+    [PASS]  b15oaoi13an1n02x3 == b15oaoi13an1n02x3   (level 1)
+    [PASS]  b15cbf000an1n16x5 == b15cbf000an1n16x5   (level 1)
+    [PASS]  b15nor002an1n02x3 == b15nor002an1n02x3   (level 1)
+    [PASS]  b15nanb02an1n02x5 == b15nanb02an1n02x5   (level 1)
+    [PASS]  b15nano22an1n02x5 == b15nano22an1n02x5   (level 1)
+    [PASS]  b15and002an1n02x5 == b15and002an1n02x5   (level 1)
+    [PASS]  b15tilo00an1n03x5 == b15tilo00an1n03x5   (level 1)
+    [PASS]  b15obai22an1n02x3 == b15obai22an1n02x3   (level 1)
+    [PASS]  b15bfn001an1n16x5 == b15bfn001an1n16x5   (level 1)
+    [PASS]  b15fpn010hn1n02x3 == b15fpn010hn1n02x3   (level 1)
+    [PASS]  b15cilb01hn1n32x5 == b15cilb01hn1n32x5   (level 1)
+    [PASS]  b15bfn000an1n48x5 == b15bfn000an1n48x5   (level 1)
+    [PASS]  b15nonb02an1n02x3 == b15nonb02an1n02x3   (level 1)
+    [PASS]  b15bfn000an1n32x5 == b15bfn000an1n32x5   (level 1)
+    [PASS]  b15inv020an1n10x5 == b15inv020an1n10x5   (level 1)
+    [PASS]  b15cxorc2an1n02x5 == b15cxorc2an1n02x5   (level 1)
+    [PASS]  b15bfn001an1n12x5 == b15bfn001an1n12x5   (level 1)
+    [PASS]  b15oai012an1n02x5 == b15oai012an1n02x5   (level 1)
+    [PASS]  b15aoi013an1n02x3 == b15aoi013an1n02x3   (level 1)
+    [PASS]  b15inv040an1n05x5 == b15inv040an1n05x5   (level 1)
+    [PASS]  b15nand04an1n02x5 == b15nand04an1n02x5   (level 1)
+    [PASS]  b15zdnd00an1n02x5 == b15zdnd00an1n02x5   (level 1)
+    [PASS]  b15bfn001an1n24x5 == b15bfn001an1n24x5   (level 1)
+    [PASS]  b15zdnf33an1n08x5 == b15zdnf33an1n08x5   (level 1)
+    [PASS]  b15rm6013en1n02x5 == b15rm6013en1n02x5   (level 1)
+    [PASS]  b15inv040an1n02x5 == b15inv040an1n02x5   (level 1)
+    [PASS]  b15rt0022en1n02x5 == b15rt0022en1n02x5   (level 1)
+    [PASS]  b15mbn022an1n02x5 == b15mbn022an1n02x5   (level 1)
+    [PASS]  b15zdnf33an1n64x5 == b15zdnf33an1n64x5   (level 1)
+    [PASS]  b15bfn001an1n80x5 == b15bfn001an1n80x5   (level 1)
+    [PASS]  b15nanb03an1n02x5 == b15nanb03an1n02x5   (level 1)
+    [PASS]  b15zdnf33an1n04x5 == b15zdnf33an1n04x5   (level 1)
+    [PASS]  b15ao0012an1n02x5 == b15ao0012an1n02x5   (level 1)
+    [PASS]  b15mbc004an1n02x5 == b15mbc004an1n02x5   (level 1)
+    [PASS]  b15and003an1n02x5 == b15and003an1n02x5   (level 1)
+    [PASS]  b15cbf000an1n48x5 == b15cbf000an1n48x5   (level 1)
+    [PASS]  b15fqn003hn1n02x3 == b15fqn003hn1n02x3   (level 1)
+    [PASS]  b15cbf000an1n32x5 == b15cbf000an1n32x5   (level 1)
+    [PASS]  b15zdnd55an1n03x5 == b15zdnd55an1n03x5   (level 1)
+    [PASS]  b15oai112an1n02x5 == b15oai112an1n02x5   (level 1)
+    [PASS]  b15orn003an1n02x5 == b15orn003an1n02x5   (level 1)
+    [PASS]  b15bfn000an1n08x5 == b15bfn000an1n08x5   (level 1)
+    [PASS]  b15zdnf33an1n16x5 == b15zdnf33an1n16x5   (level 1)
+    [PASS]  b15nona22an1n02x5 == b15nona22an1n02x5   (level 1)
+    [PASS]  b15nonb03an1n02x3 == b15nonb03an1n02x3   (level 1)
+    [PASS]  b15bfn001an1n32x5 == b15bfn001an1n32x5   (level 1)
+    [PASS]  b15bfn000an1n06x5 == b15bfn000an1n06x5   (level 1)
+    [PASS]  b15bfn000an1n65x5 == b15bfn000an1n65x5   (level 1)
+    [PASS]  b15inv000an1n02x5 == b15inv000an1n02x5   (level 1)
+    [PASS]  b15bfn000an1n05x5 == b15bfn000an1n05x5   (level 1)
+    [PASS]  b15bfn000an1n04x5 == b15bfn000an1n04x5   (level 1)
+    [PASS]  b15ao0022an1n02x5 == b15ao0022an1n02x5   (level 1)
+    [PASS]  b15nano23an1n02x5 == b15nano23an1n02x5   (level 1)
+    [PASS]  b15bfn000an1n03x5 == b15bfn000an1n03x5   (level 1)
+    [PASS]  b15bfn000an1n02x5 == b15bfn000an1n02x5   (level 1)
+    [PASS]  b15oai122an1n02x5 == b15oai122an1n02x5   (level 1)
+    [PASS]  b15cilb01hn1n16x5 == b15cilb01hn1n16x5   (level 1)
+    [PASS]  b15oaix22an1d02x4 == b15oaix22an1d02x4   (level 1)
+    [PASS]  b15nand03an1n02x5 == b15nand03an1n02x5   (level 1)
+    [PASS]  b15bfn000an1n15x5 == b15bfn000an1n15x5   (level 1)
+    [PASS]  b15fqy003hn1n02x3 == b15fqy003hn1n02x3   (level 1)
+    [PASS]  b15andc04an1n02x5 == b15andc04an1n02x5   (level 1)
+    [PASS]  b15ydp151an1n03x5 == b15ydp151an1n03x5   (level 1)
+    [PASS]  b15ztpn00an1d03x5 == b15ztpn00an1d03x5   (level 1)
+    [PASS]  b15xnrc02an1n02x5 == b15xnrc02an1n02x5   (level 1)
+    [PASS]  b15xorc02an1n02x5 == b15xorc02an1n02x5   (level 1)
+    [PASS]  b15aoai13an1n02x3 == b15aoai13an1n02x3   (level 1)
+    [PASS]  b15fpn000hn1n04x3 == b15fpn000hn1n04x3   (level 1)
+    [PASS]  b15aoi012an1n02x3 == b15aoi012an1n02x3   (level 1)
+    [PASS]  b15ztpn00an1n08x5 == b15ztpn00an1n08x5   (level 1)
+    [PASS]  b15cbf000an1n64x5 == b15cbf000an1n64x5   (level 1)
+    [PASS]  b15bfn001an1n08x5 == b15bfn001an1n08x5   (level 1)
+    [PASS]  b15oa0012an1n02x5 == b15oa0012an1n02x5   (level 1)
+    [PASS]  b15nona23an1n02x5 == b15nona23an1n02x5   (level 1)
+    [PASS]  b15orn002an1n02x5 == b15orn002an1n02x5   (level 1)
+    [PASS]  b15bfn001an1n50x5 == b15bfn001an1n50x5   (level 1)
+    [PASS]  b15cilb01hn1n24x5 == b15cilb01hn1n24x5   (level 1)
+
+
+---------------------------------------------------------------------------
+Assign Layer Statistics
+---------------------------------------------------------------------------
+
+Utilized Assign Layers = 338
+ Empty Utilized Assign Layers = 290
+ Non-Empty Utilized Assign Layers = 48
+Pruned Assign Layers = 14380
+
+
+---------------------------------------------------------------------------
+Run Configuration
+---------------------------------------------------------------------------
+
+run_options()
+ verbose_results_file = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+hierarchy_options()
+ delete = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+error_options()
+ error_limit_per_check = 4999
+ match_errors = { }
+ match_errors_processing_mode = HIERARCHICAL
+ match_errors_tolerance = 0.0000
+ violation_options = { }
+ report_empty_violations = false
+ clean_classifications = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Production Environment Variables
+
+HOME = "/home/aditichh"
+ICV_HOME_DIR = "/cad/synopsys/icvalidator/U-2022.12-SP4-1"
+PATH = "/cad/synopsys/icvalidator/U-2022.12-SP4-1/bin/LINUX64_L31el:/cad/synopsys/icvalidator/U-2022.12-SP4-1/contrib/bin/LINUX64_L31el:/scratch/ee599-fall2024/team-4/ee599-milestone1/synthesis/venv/bin:/cad/cadence/installs/ICADVM201/tools/dfII/bin:/cad/cadence/installs/ICADVM201/tools/bin:/cad/genesis2/r11879/Genesis2Tools/gui/bin:/cad/genesis2/r11879/Genesis2Tools/bin:/opt/rh/rh-python38/root/usr/local/bin:/opt/rh/rh-python38/root/usr/bin:/cad/mentor/calibre/aoi_cal_2022.2_24.16/bin:/cad/synopsys/verdi/T-2022.06-SP2-6/bin:/cad/synopsys/icv_workbench/V-2023.09/bin:/cad/synopsys/icvalidator/U-2022.12-SP4-1/bin:/cad/synopsys/vcs/S-2021.09-SP1/bin:/cad/synopsys/prime/T-2022.03/bin:/cad/cadence/installs/XCELIUM2303/tools/bin:/cad/cadence/installs/DDI221/INNOVUS221/bin:/cad/cadence/installs/GENUS211/bin:/cad/synopsys/fm/U-2022.12-SP6/bin:/cad/synopsys/syn/U-2022.12/bin:/cad/synopsys/lc/U-2022.12-SP6/bin:/classes/ee599/bin:/usr/local/openssl/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/aditichh/bin:/usr/lib:/home/aditichh/.local/bin:/home/aditichh/bin"
+SNPSLMD_LICENSE_FILE = "1720@ee-licapp-prd1.usc.edu"
+USER = "aditichh"
+
+5 production environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Debug Environment Variables
+
+0 debug environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Distributed Processing
+ Distributed Cores = 2
+
+ eceedc-01.usc.edu (2/176)
+   Commands: 2 in parallel, maximum
+   Model: Intel(R) Xeon(R) CPU E5-4669 v4 @ 2.20GHz (VMware full virtualization)
+   CPU:   176 cpu 2200 MHz
+   Cores: 176 
+   RAM:   491.891 GB
+   Swap:  3.999 GB
+
+
+---------------------------------------------------------------------------
+Performance Statistics
+---------------------------------------------------------------------------
+
+IC Validator Run Time = 0:04:26
+Peak Single Command Memory = 0.255 GB
+Peak Disk Usage = 0.116 GB
+Network Disk Usage Peak=0.095 GB (no group)
+Group File Disk Usage Peak=0.020 GB
+
+Distributed Host Memory Usage
+ eceedc-01.usc.edu (2/176)  ....  Average=5.101 GB, Peak=8.548 GB / 491.891 GB
+
+Overall Distributed Utilization: not available
+IC Validator is done.
