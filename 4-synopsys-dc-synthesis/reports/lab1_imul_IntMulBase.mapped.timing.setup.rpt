@@ -1,0 +1,116 @@
+ 
+****************************************
+Report : timing
+        -path full_clock
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 30
+        -transition_time
+        -capacitance
+Design : lab1_imul_IntMulBase
+Version: U-2022.12
+Date   : Wed Sep 24 14:24:20 2025
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: resp_rdy (input port clocked by ideal_clock)
+  Endpoint: ctrl/state_reg_reg_1_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REGIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  lab1_imul_IntMulBase 5K_hvratio_1_1      NangateOpenCellLibrary
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                                             0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      1.0000     1.0000 f
+  resp_rdy (in)                                                   0.0020    0.0011     1.0011 f
+  resp_rdy (net)                                1       1.8681              0.0000     1.0011 f
+  ctrl/resp_rdy (lab1_imul_IntMulBase_lab1_imul_IntMulBaseCtrl_0)           0.0000     1.0011 f
+  ctrl/resp_rdy (net)                                   1.8681              0.0000     1.0011 f
+  ctrl/U16/B2 (OAI21_X1)                                          0.0020    0.0116     1.0128 f
+  ctrl/U16/ZN (OAI21_X1)                                          0.0197    0.0301     1.0429 r
+  ctrl/n7 (net)                                 1       1.9805              0.0000     1.0429 r
+  ctrl/U17/A (OAI21_X1)                                           0.0197    0.0123     1.0552 r
+  ctrl/U17/ZN (OAI21_X1)                                          0.0192    0.0220     1.0772 f
+  ctrl/n1 (net)                                 1       2.0739              0.0000     1.0772 f
+  ctrl/state_reg_reg_1_/SE (SDFF_X1)                              0.0192    0.0129     1.0902 f
+  data arrival time                                                                    1.0902
+
+  clock ideal_clock (rise edge)                                             2.0000     2.0000
+  clock network delay (ideal)                                               0.0000     2.0000
+  ctrl/state_reg_reg_1_/CK (SDFF_X1)                                        0.0000     2.0000 r
+  library setup time                                                       -0.0891     1.9109
+  data required time                                                                   1.9109
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                   1.9109
+  data arrival time                                                                   -1.0902
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.8208
+
+
+  Startpoint: resp_rdy (input port clocked by ideal_clock)
+  Endpoint: ctrl/state_reg_reg_1_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REGIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  lab1_imul_IntMulBase 5K_hvratio_1_1      NangateOpenCellLibrary
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                                             0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      1.0000     1.0000 f
+  resp_rdy (in)                                                   0.0020    0.0011     1.0011 f
+  resp_rdy (net)                                1       1.8681              0.0000     1.0011 f
+  ctrl/resp_rdy (lab1_imul_IntMulBase_lab1_imul_IntMulBaseCtrl_0)           0.0000     1.0011 f
+  ctrl/resp_rdy (net)                                   1.8681              0.0000     1.0011 f
+  ctrl/U16/B2 (OAI21_X1)                                          0.0020    0.0116     1.0128 f
+  ctrl/U16/ZN (OAI21_X1)                                          0.0197    0.0301     1.0429 r
+  ctrl/n7 (net)                                 1       1.9805              0.0000     1.0429 r
+  ctrl/U17/A (OAI21_X1)                                           0.0197    0.0123     1.0552 r
+  ctrl/U17/ZN (OAI21_X1)                                          0.0192    0.0190     1.0743 f
+  ctrl/n1 (net)                                 1       2.0739              0.0000     1.0743 f
+  ctrl/state_reg_reg_1_/SE (SDFF_X1)                              0.0192    0.0129     1.0872 f
+  data arrival time                                                                    1.0872
+
+  clock ideal_clock (rise edge)                                             2.0000     2.0000
+  clock network delay (ideal)                                               0.0000     2.0000
+  ctrl/state_reg_reg_1_/CK (SDFF_X1)                                        0.0000     2.0000 r
+  library setup time                                                       -0.0891     1.9109
+  data required time                                                                   1.9109
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                   1.9109
+  data arrival time                                                                   -1.0872
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.8237
+
+
+1
